@@ -428,6 +428,59 @@ enclave.protect()
 enclave.verify()
 ```
 
+## Project Structure
+
+```
+enclave/
+├── contracts/
+│   ├── ShardRegistry.sol     # UUPS upgradeable proxy
+│   └── INFT.sol              # ERC-7857 iNFT contract
+├── scripts/
+│   ├── enclave.ts            # Main pipeline
+│   ├── ast-shard.ts          # AST semantic sharding middleware
+│   ├── malicious_node.ts     # Live attack simulation
+│   ├── deploy.ts             # Deploy ShardRegistry
+│   ├── deploy-inft.ts        # Deploy iNFT contract
+│   └── mint-inft.ts          # Mint agent as iNFT
+├── sdk/
+│   └── src/index.ts          # enclave-sdk-0g source
+└── enclave-dashboard/        # Next.js dashboard
+```
+
+## Setup
+
+```bash
+git clone https://github.com/Web3smallie/enclave
+cd enclave
+nvm use 22
+npm install
+```
+
+Create `.env`:
+```
+PRIVATE_KEY=your_wallet_private_key
+```
+
+Fund providers:
+```bash
+0g-compute-cli deposit --amount 3
+0g-compute-cli transfer-fund --provider 0xd9966e13a6026Fcca4b13E7ff95c94DE268C471C --amount 1
+0g-compute-cli transfer-fund --provider 0x1B3AAef3ae5050EEE04ea38cD4B087472BD85EB0 --amount 1
+0g-compute-cli transfer-fund --provider 0x4870CbC4D07d6Ac2EE5aA865588e5985FE77a4E9 --amount 1
+```
+
+## npm SDK
+
+```bash
+npm install enclave-sdk-0g
+```
+
+```typescript
+import { enclave } from 'enclave-sdk-0g';
+
+await enclave.protect(myAgentLogic, { shards: 3 });
+await enclave.verify(agentId);
+```
 ---
 
 # Hackathon
