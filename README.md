@@ -164,6 +164,18 @@ This is not random splitting — it is semantic isolation.
 
 A temporary encryption session key is generated inside a TeeML enclave.
 
+- *What happened:* Before any shard was encrypted, ENCLAVE requested a session encryption key from a TeeML hardware enclave. The key was generated entirely inside the sealed TEE environment and returned alongside a valid hardware attestation signature.
+
+This is a critical security step because:
+
+- the key never existed on any external machine
+- the key was never transmitted in plaintext outside the enclave boundary
+- the key was generated inside trusted hardware memory only
+- the attestation proves it originated from a real TeeML enclave instance
+
+This session key was then used to seed the encryption of all three semantic shards.  
+This ensures that shard encryption is *TEE-originated*, not externally derived or user-generated.
+
 Key properties:
 - generated inside secure enclave memory
 - never leaves TEE boundary
@@ -173,6 +185,12 @@ Key properties:
 After execution:
 - session key is destroyed
 - no reusable encryption state remains
+
+
+In other words:
+
+> The encryption root of the entire agent lifecycle begins inside trusted hardware, not in application code or external infrastructure
+
 
 ---
 
@@ -369,6 +387,7 @@ Encrypted payload inaccessible.
 ## Key Generation
 - **TEE Session Key Chat ID:** `6d16a5c8-96e4-4e43-a5c5-f7e8dfde66ba`
 - **Session Key Ref:** `9f1a2b3c`
+- *Provider:* 0xd9966e13a6026Fcca4b13E7ff95c94DE268C471C (GLM-5-FP8)
 
 ## Transaction Hashes
 
