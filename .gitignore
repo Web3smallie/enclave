@@ -1,0 +1,8 @@
+.env
+node_modules
+agent/venv
+agent_state.json
+artifacts/
+cache/
+typechain-types/
+ENCLAVE-BUILD/

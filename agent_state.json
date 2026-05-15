@@ -1,0 +1,27 @@
+{
+  "agentId": "0xe17afc5cc564576b0dbe1204d4ec06db08594729a40440e0b1a2a9c56776aaac",
+  "storageRoots": [
+    "0x15b7eeec141b5925420c3e50b06339c824771f7c8b87d017243b96d3988105e9",
+    "0xa445e3e466f5c0bd7c5e1b488ecbc69776aed407b1c164ab4dfae275eae0624c",
+    "0x41d288933b825bf7f1dda010a22bf0911e170e729705e5b4e027c710306e8902"
+  ],
+  "shardHashes": [
+    "600ba01094ea6c2a79ae02e49d01e4729c437ac8de732eb63b590d352192b1a0",
+    "dbf63468ae53a031de71cbc25b0ff578f9c521fac8129361b3c0bbfcaddee115",
+    "1d9b9dbafca81256a1d39583e17df78c719865fdda46abff9c1906564b589b5f"
+  ],
+  "contractAddress": "0x2ABa418de1A2756989D89aB97aF77f3D8229EddD",
+  "providers": [
+    "0xd9966e13a6026Fcca4b13E7ff95c94DE268C471C",
+    "0x1B3AAef3ae5050EEE04ea38cD4B087472BD85EB0",
+    "0x4870CbC4D07d6Ac2EE5aA865588e5985FE77a4E9"
+  ],
+  "teeResults": [
+    "ff1557bc-ced4-4d14-a4dd-af95f05fa36b",
+    "e142ff4c-94de-461a-869e-ae73beb419d2",
+    "dd5546ba-a86b-4ad3-b4db-736391ec887f"
+  ],
+  "registerTxHash": "0x727e63dcfc86bceef5b62936beef4d94876d01b2d278e73b270b6535ed069dfa",
+  "network": "0G Mainnet",
+  "timestamp": "2026-05-15T08:28:58.021Z"
+}
