@@ -1,0 +1,20 @@
+[
+  {
+    "index": 0,
+    "code": "function analyzeMarket(data: any) {\n  const prices = data.prices;\n  const volume = data.volume;\n  return { trend: prices[prices.length - 1] > prices[0] ? 'up' : 'down', volume };\n}\n\nfunction recordOutcome(trade: any, storage: any) {\n  storage.write({ trade, timestamp: Date.now() });\n  return true;\n}",
+    "type": "Shard",
+    "name": "Shard_0[recordOutcome...]"
+  },
+  {
+    "index": 1,
+    "code": "function calculateRisk(marketData: any) {\n  const volatility = Math.max(...marketData.prices) - Math.min(...marketData.prices);\n  const threshold = marketData.prices[0] * 0.05;\n  return volatility > threshold ? 'HIGH' : 'LOW';\n}\n\nfunction updateMemory(outcome: any, memory: any[]) {\n  memory.push(outcome);\n  if (memory.length > 100) memory.shift();\n  return memory;\n}",
+    "type": "Shard",
+    "name": "Shard_1[updateMemory...]"
+  },
+  {
+    "index": 2,
+    "code": "function executeTrade(risk: string, amount: number) {\n  if (risk === 'LOW') {\n    return { action: 'BUY', amount, timestamp: Date.now() };\n  }\n  return { action: 'HOLD', amount: 0, timestamp: Date.now() };\n}",
+    "type": "Shard",
+    "name": "Shard_2[executeTrade...]"
+  }
+]

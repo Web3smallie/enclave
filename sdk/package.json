@@ -1,0 +1,21 @@
+{
+  "name": "enclave-sdk-0g",
+  "version": "1.0.0",
+  "description": "Confidential agent-logic execution primitive on 0G Labs",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["0g", "tee", "enclave", "agent", "confidential", "web3"],
+  "author": "Web3smallie",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.0.0"
+  },
+  "devDependencies": {
+  
+    "typescript": "^5.0.0"
+  }
+}
