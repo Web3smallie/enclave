@@ -144,7 +144,7 @@ async function main() {
 
   // STEP 1: TEE Call 1 — Generate session key inside TEE enclave
   console.log('\n🔑 STEP 1: Generating session key inside TEE enclave...');
-  const agentId = ethers.keccak256(ethers.toUtf8Bytes('ENCLAVE_AGENT_AST_001'));
+  const agentId = ethers.keccak256(ethers.toUtf8Bytes('ENCLAVE_AGENT_DEMO_003'));
 
   const keyGenResult = await teeCall(
     broker,
