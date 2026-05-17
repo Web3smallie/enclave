@@ -380,30 +380,51 @@ Encrypted payload inaccessible.
 
 | Shard | 0G Storage Root | Shard Hash | TeeML Chat ID | Provider |
 |-------|----------------|------------|---------------|----------|
-| 0 | `0xd8a8e687586fccbbba7062643d9499a6a0f40a28e5ecf643cbc1b1f168cd1ff6` | `6a6eb59bfbf0f8ce0b9ef6a166a7e833b9d2036690035d38c58fcab3225c9a4e` | `9c6200f0-c80b-4837-a008-1a178a3f4530` | GLM-5-FP8 |
-| 1 | `0xc443fe8ec3c1d80e670afc8b0b674e705ef3ef7c57967829a58dd0df7c03c7b5` | `d4df3e50d4e39cddee5a6ee685be36f2616ea1e656b38c8ab221e5765e2c5640` | `d58c512f-0e57-467c-a225-e8a071c280df` | DeepSeek-V3 |
-| 2 | `0x07879916b034a0e7582c209fd97e6c7c64d43f9d212277550a03c6835d1b44ff` | `78f2a52828b42eeb0908554aa745464d1c29f393c649ca9c72590af90fd9b33b` | `b45d229b-ccf3-48df-9725-04a703e5708d` | 0GM-1.0-35B |
+| 0 | `0xbf07a310655f0d131ec5a9755bc7b0ebf6352bfda5664b9593ea0d45e3b5c3a2` | `4bb32689e23db89b...` | `f378bd9c-f328-4fe5-b485-58fa55c6cb84` | GLM-5-FP8 |
+| 1 | `0x46e843afd7eb6a48c437baaf393328b3f8c45a424567d8c93bbb99ef71c43681` | `3115f22b91aa5a0d...` | `f22c99bc-f3a4-4605-a204-d9890bf6f4ab` | DeepSeek-V3 |
+| 2 | `0xe92cca9b1bf12ca7790f005cc8fdeb0a563198d3d689245f4759a9497161ee4c` | `f4a3b88fe0f1fc77...` | `2e25d09e-941e-4694-889c-9dd332f00e30` | 0GM-1.0-35B |
 
 ## Key Generation
 - **TEE Session Key Chat ID:** `6d16a5c8-96e4-4e43-a5c5-f7e8dfde66ba`
 - **Session Key Ref:** `9f1a2b3c`
 - *Provider:* 0xd9966e13a6026Fcca4b13E7ff95c94DE268C471C (GLM-5-FP8)
 
+
 ## Transaction Hashes
 
-| Action | TX Hash |
-|--------|---------|
-| Agent Registration | `0x49fb94c84da4f3ff846550d04ff69d60cb035ef044dec64694d10ec4f4fae18f` |
-| iNFT Mint | `0x5f84f0d4614eaf84b46685473cb4c6a7f356cc67cc6e639c5845c239631719dd` |
-| Shard 0 Storage TX | `0xf77b85f9b28db84d173addf7d2d7a311c99dd41ad6ce56423e6e138d315702ed` |
-| Shard 1 Storage TX | `0xf3891009b30c00f3caacab376a09fd0ae0496518d75b65c8cad5f053e3ecfc2e` |
-| Shard 2 Storage TX | `0x25764d6b87ff98a95627a247b7773ff2b685e3c461064632d4d9030a586df583` |
+| Action | TX Hash | Explorer |
+|--------|---------|---------|
+| Agent Registration | `0xb208fc29216a7007bbe911a2f37d0adc92f5e71c9c315ad072c02d6fcf0bc20a` | [View](https://chainscan.0g.ai/tx/0xb208fc29216a7007bbe911a2f37d0adc92f5e71c9c315ad072c02d6fcf0bc20a) |
+| Shard 0 Storage | `0x01fba657f436d44c203bb8788c582b75a6b6c22b76798508fec446a6c2cfcd06` | [View](https://chainscan.0g.ai/tx/0x01fba657f436d44c203bb8788c582b75a6b6c22b76798508fec446a6c2cfcd06) |
+| Shard 1 Storage | `0x4ca40621bf8faef612ae8fbf05f38975f06a7363b0a5610091eb7d432df05d89` | [View](https://chainscan.0g.ai/tx/0x4ca40621bf8faef612ae8fbf05f38975f06a7363b0a5610091eb7d432df05d89) |
+| Shard 2 Storage | `0x3ffb78f63b0948aec6637db419e3bd379bbdac4acd4b3b395ee3a8fbb531ff2a` | [View](https://chainscan.0g.ai/tx/0x3ffb78f63b0948aec6637db419e3bd379bbdac4acd4b3b395ee3a8fbb531ff2a) |
+| iNFT Mint | `0x5f84f0d4614eaf84b46685473cb4c6a7f356cc67cc6e639c5845c239631719dd` | [View](https://chainscan.0g.ai/tx/0x5f84f0d4614eaf84b46685473cb4c6a7f356cc67cc6e639c5845c239631719dd) |
+
+
+## TEE Attestations
+
+| Shard | Attestation Hash |
+|-------|-----------------|
+| 0 | `0x902d4e90f1ef8fbb81f7c77955cad87a21c53c427bae3b3c03ec86c858c8123b` |
+| 1 | `0x65f04378509dd034c4aa17754676a7bd8bf4ebda2ce64a3c001f4f9ea7d7641b` |
+| 2 | `0xbdf136cffd1f5b607662d26421ab62baa69ed97226d638b7b5e20c92b4627564` |
+
+## Storage Merkle Roots (0G Storage Indexer)
+
+| Shard | Merkle Root | Verify |
+|-------|------------|--------|
+| 0 | `0xbf07a310655f0d131ec5a9755bc7b0ebf6352bfda5664b9593ea0d45e3b5c3a2` | [View](https://indexer-storage-turbo.0g.ai/file/info?root=0xbf07a310655f0d131ec5a9755bc7b0ebf6352bfda5664b9593ea0d45e3b5c3a2) |
+| 1 | `0x46e843afd7eb6a48c437baaf393328b3f8c45a424567d8c93bbb99ef71c43681` | [View](https://indexer-storage-turbo.0g.ai/file/info?root=0x46e843afd7eb6a48c437baaf393328b3f8c45a424567d8c93bbb99ef71c43681) |
+| 2 | `0xe92cca9b1bf12ca7790f005cc8fdeb0a563198d3d689245f4759a9497161ee4c` | [View](https://indexer-storage-turbo.0g.ai/file/info?root=0xe92cca9b1bf12ca7790f005cc8fdeb0a563198d3d689245f4759a9497161ee4c) |
+
 
 ## Verify on ChainScan
 
-- Contract: https://chainscan.0g.ai/address/0x2ABa418de1A2756989D89aB97aF77f3D8229EddD
-- iNFT: https://chainscan.0g.ai/address/0xe64624675E915fD50748a538d9bD566073B60d52
-- Registration TX: https://chainscan.0g.ai/tx/0x49fb94c84da4f3ff846550d04ff69d60cb035ef044dec64694d10ec4f4fae18f
+| Component | Link |
+|-----------|------|
+| ShardRegistry Contract | [View](https://chainscan.0g.ai/address/0x2ABa418de1A2756989D89aB97aF77f3D8229EddD) |
+| iNFT Contract | [View](https://chainscan.0g.ai/address/0xe64624675E915fD50748a538d9bD566073B60d52) |
+| Agent Registration TX | [View](https://chainscan.0g.ai/tx/0xb208fc29216a7007bbe911a2f37d0adc92f5e71c9c315ad072c02d6fcf0bc20a) |
 
 ---
 
